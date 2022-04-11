@@ -95,6 +95,18 @@ export interface languageStruct {
         osUnsupported: string
       }
     },
+    itchIoParser: {
+      itchIoAppDataOverrideTitle: string,
+      docs__md: {
+        self: string[],
+        input: string[]
+      },
+      errors: {
+        invalidItchIoAppDataOverride: string,
+        osUnsupported: string,
+        fatalError__i: string
+      }
+    },
     epicParser: {
       manifestsInputTitle: string,
       launcherModeInputTitle: string,

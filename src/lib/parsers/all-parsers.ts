@@ -4,3 +4,4 @@ export * from './epic.parser';
 export * from './gog-galaxy.parser';
 export * from './steam.parser';
 export * from './amazon-games.parser';
+export * from './itch-io.parser';
