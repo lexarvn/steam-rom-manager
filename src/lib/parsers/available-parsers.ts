@@ -1,11 +1,13 @@
 export const availableParsers = [
   'Glob',
   'Glob-regex',
-  'Epic',
   'Steam',
+  'Epic',
   'GOG Galaxy',
   'Amazon Games',
-  'itch.io'
+  'itch.io',
+  'UPlay',
+  'Manual'
 ]
 
 export const availableParserInputs: {[parserType: string]: string[]} = {
@@ -15,9 +17,12 @@ export const availableParserInputs: {[parserType: string]: string[]} = {
   'Epic': ['manifests', 'epicLauncherMode'],
   'GOG Galaxy': ['galaxyExeOverride','gogLauncherMode'],
   'Amazon Games': ['amazonGamesExeOverride', 'amazonGamesLauncherMode'],
-  'itch.io': ['itchIoAppDataOverride']
+  'itch.io': ['itchIoAppDataOverride'],
+  'UPlay': ['uplayDir','uplayLauncherMode'],
+  'Manual': ['manifests']
 }
 
+export const manualParsers = ['Manual']
 export const artworkOnlyParsers = ['Steam']
 export const ROMParsers = ['Glob', 'Glob-regex']
-export const platformParsers = ['Epic','GOG Galaxy','Amazon Games','itch.io']
+export const platformParsers = ['Epic','GOG Galaxy','Amazon Games','itch.io','UPlay']

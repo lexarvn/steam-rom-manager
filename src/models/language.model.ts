@@ -109,6 +109,16 @@ export interface languageStruct {
         fatalError__i: string
       }
     },
+    manualParser: {
+        manifestsInputTitle: string,
+        docs__md: {
+            self: string[],
+            input: string[]
+        },
+        errors: {
+            fatalError__i: string
+        }
+    },
     epicParser: {
       manifestsInputTitle: string,
       launcherModeInputTitle: string,
@@ -123,6 +133,21 @@ export interface languageStruct {
         fatalError__i: string
       }
     },
+    uplayParser: {
+      uplayDirTitle: string,
+      launcherModeInputTitle: string,
+      docs__md: {
+        self: string[],
+        input: string[]
+      },
+      errors: {
+        invalidManifestsOverride: string,
+        uplayNotCompatible: string,
+        uplayNotInstalled: string,
+        uplayDirNotFound: string,
+        fatalError__i: string
+      }
+    },
     gogParser: {
       galaxyExeOverrideTitle: string,
       launcherModeInputTitle: string,
@@ -131,6 +156,8 @@ export interface languageStruct {
         input: string[]
       }, errors: {
         invalidGalaxyExeOverride: string,
+        gogNotCompatible: string,
+        gogNotInstalled: string,
         fatalError__i: string
       }
     },
@@ -224,6 +251,9 @@ export interface languageStruct {
             environmentVariables: string,
             communityPresets: string
         },
+        docs__md: {
+          settings: string[]
+        },
           text: {
             offlineMode: string,
               removeApps_desc: string,
@@ -234,7 +264,10 @@ export interface languageStruct {
               enabledProviders: string,
               selectLanguage: string,
               resetFuzzy_desc: string,
+              resetFuzzyCache_desc: string,
               resetFuzzy_btn: string,
+              customVariables_desc: string,
+              configPresets_desc: string,
               showSteamImages: string,
               deleteDisabledShortcuts: string,
               clearLogOnTest: string
@@ -244,6 +277,9 @@ export interface languageStruct {
               steamDirectoryWin: string,
               steamDirectoryLinux: string,
               steamDirectoryMac: string,
+              romsDirectoryWin: string,
+              romsDirectoryLinux: string,
+              romsDirectoryMac: string,
               retroarchPathWin: string,
               retroarchPathMac: string,
               retroarchPathLinux: string,
@@ -495,7 +531,9 @@ export interface languageStruct {
                 executableModifier__md: string,
                 variableString__md: string,
                 imageProviders__md: string,
-                unhandledValidationKey__md: string
+                unhandledValidationKey__md: string,
+                genericDir__md: string,
+                genericPath__md: string
             },
             text: {
               noTitle: string
